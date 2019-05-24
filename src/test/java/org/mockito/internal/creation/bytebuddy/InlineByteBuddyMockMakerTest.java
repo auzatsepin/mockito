@@ -4,11 +4,11 @@
  */
 package org.mockito.internal.creation.bytebuddy;
 
-import net.bytebuddy.ByteBuddy;
-import net.bytebuddy.ClassFileVersion;
-import net.bytebuddy.description.modifier.Visibility;
-import net.bytebuddy.description.type.TypeDescription;
-import net.bytebuddy.implementation.StubMethod;
+import com.github.shaded.bytebuddy.ByteBuddy;
+import com.github.shaded.bytebuddy.ClassFileVersion;
+import com.github.shaded.bytebuddy.description.modifier.Visibility;
+import com.github.shaded.bytebuddy.description.type.TypeDescription;
+import com.github.shaded.bytebuddy.implementation.StubMethod;
 import org.junit.Test;
 import org.mockito.exceptions.base.MockitoException;
 import org.mockito.internal.creation.MockSettingsImpl;
@@ -27,8 +27,8 @@ import java.util.Observer;
 import java.util.Set;
 import java.util.regex.Pattern;
 
-import static net.bytebuddy.ClassFileVersion.JAVA_V8;
-import static net.bytebuddy.matcher.ElementMatchers.named;
+import static com.github.shaded.bytebuddy.ClassFileVersion.JAVA_V8;
+import static com.github.shaded.bytebuddy.matcher.ElementMatchers.named;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.fail;
 import static org.junit.Assume.assumeTrue;

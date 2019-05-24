@@ -5,11 +5,11 @@
 
 package org.mockitousage.spies;
 
-import net.bytebuddy.ByteBuddy;
-import net.bytebuddy.ClassFileVersion;
-import net.bytebuddy.description.modifier.Visibility;
-import net.bytebuddy.dynamic.loading.ClassLoadingStrategy;
-import net.bytebuddy.implementation.FixedValue;
+import com.github.shaded.bytebuddy.ByteBuddy;
+import com.github.shaded.bytebuddy.ClassFileVersion;
+import com.github.shaded.bytebuddy.description.modifier.Visibility;
+import com.github.shaded.bytebuddy.dynamic.loading.ClassLoadingStrategy;
+import com.github.shaded.bytebuddy.implementation.FixedValue;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 import org.mockito.exceptions.base.MockitoException;

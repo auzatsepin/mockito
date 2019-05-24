@@ -4,7 +4,7 @@
  */
 package org.mockito.internal.creation.bytebuddy;
 
-import net.bytebuddy.ByteBuddy;
+import com.github.shaded.bytebuddy.ByteBuddy;
 import org.junit.Test;
 import org.mockito.Mockito;
 import org.mockito.internal.creation.MockSettingsImpl;

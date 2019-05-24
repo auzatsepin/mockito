@@ -5,14 +5,14 @@
 package org.mockito.moduletest;
 
 import java.util.concurrent.locks.Lock;
-import net.bytebuddy.ByteBuddy;
-import net.bytebuddy.description.modifier.Visibility;
-import net.bytebuddy.dynamic.loading.ClassInjector;
-import net.bytebuddy.implementation.FixedValue;
-import net.bytebuddy.jar.asm.ClassWriter;
-import net.bytebuddy.jar.asm.ModuleVisitor;
-import net.bytebuddy.jar.asm.Opcodes;
-import net.bytebuddy.utility.OpenedClassReader;
+import com.github.shaded.bytebuddy.ByteBuddy;
+import com.github.shaded.bytebuddy.description.modifier.Visibility;
+import com.github.shaded.bytebuddy.dynamic.loading.ClassInjector;
+import com.github.shaded.bytebuddy.implementation.FixedValue;
+import com.github.shaded.bytebuddy.jar.asm.ClassWriter;
+import com.github.shaded.bytebuddy.jar.asm.ModuleVisitor;
+import com.github.shaded.bytebuddy.jar.asm.Opcodes;
+import com.github.shaded.bytebuddy.utility.OpenedClassReader;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -44,7 +44,7 @@ import java.util.jar.JarEntry;
 import java.util.jar.JarOutputStream;
 import java.util.stream.Stream;
 
-import static net.bytebuddy.matcher.ElementMatchers.named;
+import static com.github.shaded.bytebuddy.matcher.ElementMatchers.named;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.fail;
 import static org.hamcrest.core.Is.is;
@@ -346,16 +346,16 @@ public class ModuleHandlingTest {
         ModuleFinder moduleFinder = ModuleFinder.of(jar);
         if (namedModules) {
             modules.add("org.mockito");
-            modules.add("net.bytebuddy");
-            modules.add("net.bytebuddy.agent");
+            modules.add("com.github.shaded.bytebuddy");
+            modules.add("com.github.shaded.bytebuddy.agent");
             // We do not list all packages but only roots and packages that interact with the mock where
             // we attempt to validate an interaction of two modules. This is of course a bit hacky as those
             // libraries would normally be entirely encapsulated in an automatic module with all their classes
             // but it is sufficient for the test and saves us a significant amount of code.
             moduleFinder = ModuleFinder.compose(moduleFinder,
                 automaticModule("org.mockito", "org.mockito", "org.mockito.internal.creation.bytebuddy"),
-                automaticModule("net.bytebuddy", "net.bytebuddy"),
-                automaticModule("net.bytebuddy.agent", "net.bytebuddy.agent"));
+                automaticModule("com.github.shaded.bytebuddy", "com.github.shaded.bytebuddy"),
+                automaticModule("com.github.shaded.bytebuddy.agent", "com.github.shaded.bytebuddy.agent"));
         }
         Configuration configuration = Configuration.resolve(
             moduleFinder,

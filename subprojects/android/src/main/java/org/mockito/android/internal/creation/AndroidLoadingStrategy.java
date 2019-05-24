@@ -4,8 +4,8 @@
  */
 package org.mockito.android.internal.creation;
 
-import net.bytebuddy.android.AndroidClassLoadingStrategy;
-import net.bytebuddy.dynamic.loading.ClassLoadingStrategy;
+import com.github.shaded.bytebuddy.android.AndroidClassLoadingStrategy;
+import com.github.shaded.bytebuddy.dynamic.loading.ClassLoadingStrategy;
 import org.mockito.exceptions.base.MockitoException;
 import org.mockito.internal.creation.bytebuddy.SubclassLoader;
 

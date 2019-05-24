@@ -50,6 +50,7 @@ apply from: 'gradle/dependencies.gradle'
 allprojects { proj ->
     repositories {
         jcenter()
+        mavenLocal()
     }
     plugins.withId('java') {
         proj.apply from: "$rootDir/gradle/errorprone.gradle"

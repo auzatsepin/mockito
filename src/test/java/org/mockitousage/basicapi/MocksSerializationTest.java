@@ -5,7 +5,7 @@
 
 package org.mockitousage.basicapi;
 
-import net.bytebuddy.ClassFileVersion;
+import com.github.shaded.bytebuddy.ClassFileVersion;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 import org.mockito.InOrder;

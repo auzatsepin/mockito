@@ -4,7 +4,7 @@
  */
 package org.mockito.internal.configuration;
 
-import net.bytebuddy.ByteBuddy;
+import com.github.shaded.bytebuddy.ByteBuddy;
 import org.assertj.core.api.Assertions;
 import org.junit.After;
 import org.junit.Test;
@@ -29,7 +29,7 @@ public class GlobalConfigurationTest {
         ClassLoader anotherWorld = ClassLoaders.isolatedClassLoader()
                 .withCurrentCodeSourceUrls()
                 .withCodeSourceUrlOf(Mockito.class, ByteBuddy.class, Objenesis.class)
-                .withPrivateCopyOf("org.mockito", "net.bytebuddy", "org.objenesis")
+                .withPrivateCopyOf("org.mockito", "com.github.shaded.bytebuddy", "org.objenesis")
                 .withCodeSourceUrlOf(Assertions.class)
                 .withPrivateCopyOf("org.assertj")
                 .without("org.mockito.configuration.MockitoConfiguration")

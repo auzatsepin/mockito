@@ -4,15 +4,15 @@
  */
 package org.mockito.internal.creation.bytebuddy;
 
-import net.bytebuddy.implementation.bind.annotation.AllArguments;
-import net.bytebuddy.implementation.bind.annotation.Argument;
-import net.bytebuddy.implementation.bind.annotation.BindingPriority;
-import net.bytebuddy.implementation.bind.annotation.FieldValue;
-import net.bytebuddy.implementation.bind.annotation.Origin;
-import net.bytebuddy.implementation.bind.annotation.RuntimeType;
-import net.bytebuddy.implementation.bind.annotation.StubValue;
-import net.bytebuddy.implementation.bind.annotation.SuperCall;
-import net.bytebuddy.implementation.bind.annotation.This;
+import com.github.shaded.bytebuddy.implementation.bind.annotation.AllArguments;
+import com.github.shaded.bytebuddy.implementation.bind.annotation.Argument;
+import com.github.shaded.bytebuddy.implementation.bind.annotation.BindingPriority;
+import com.github.shaded.bytebuddy.implementation.bind.annotation.FieldValue;
+import com.github.shaded.bytebuddy.implementation.bind.annotation.Origin;
+import com.github.shaded.bytebuddy.implementation.bind.annotation.RuntimeType;
+import com.github.shaded.bytebuddy.implementation.bind.annotation.StubValue;
+import com.github.shaded.bytebuddy.implementation.bind.annotation.SuperCall;
+import com.github.shaded.bytebuddy.implementation.bind.annotation.This;
 import org.mockito.internal.debugging.LocationImpl;
 import org.mockito.internal.invocation.RealMethod;
 import org.mockito.invocation.Location;

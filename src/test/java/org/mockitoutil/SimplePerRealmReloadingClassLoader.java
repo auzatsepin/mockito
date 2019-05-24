@@ -35,7 +35,7 @@ public class SimplePerRealmReloadingClassLoader extends URLClassLoader {
         return new URL[]{
                 obtainClassPath(),
                 obtainClassPath("org.mockito.Mockito"),
-                obtainClassPath("net.bytebuddy.ByteBuddy")
+                obtainClassPath("com.github.shaded.bytebuddy.ByteBuddy")
         };
     }
 

@@ -4,27 +4,27 @@
  */
 package org.mockito.internal.creation.bytebuddy;
 
-import net.bytebuddy.ByteBuddy;
-import net.bytebuddy.ClassFileVersion;
-import net.bytebuddy.asm.Advice;
-import net.bytebuddy.asm.AsmVisitorWrapper;
-import net.bytebuddy.description.field.FieldDescription;
-import net.bytebuddy.description.field.FieldList;
-import net.bytebuddy.description.method.MethodDescription;
-import net.bytebuddy.description.method.MethodList;
-import net.bytebuddy.description.method.ParameterDescription;
-import net.bytebuddy.description.type.TypeDescription;
-import net.bytebuddy.dynamic.ClassFileLocator;
-import net.bytebuddy.dynamic.scaffold.MethodGraph;
-import net.bytebuddy.dynamic.scaffold.TypeValidation;
-import net.bytebuddy.implementation.Implementation;
-import net.bytebuddy.jar.asm.ClassVisitor;
-import net.bytebuddy.jar.asm.MethodVisitor;
-import net.bytebuddy.jar.asm.Opcodes;
-import net.bytebuddy.matcher.ElementMatchers;
-import net.bytebuddy.pool.TypePool;
-import net.bytebuddy.utility.OpenedClassReader;
-import net.bytebuddy.utility.RandomString;
+import com.github.shaded.bytebuddy.ByteBuddy;
+import com.github.shaded.bytebuddy.ClassFileVersion;
+import com.github.shaded.bytebuddy.asm.Advice;
+import com.github.shaded.bytebuddy.asm.AsmVisitorWrapper;
+import com.github.shaded.bytebuddy.description.field.FieldDescription;
+import com.github.shaded.bytebuddy.description.field.FieldList;
+import com.github.shaded.bytebuddy.description.method.MethodDescription;
+import com.github.shaded.bytebuddy.description.method.MethodList;
+import com.github.shaded.bytebuddy.description.method.ParameterDescription;
+import com.github.shaded.bytebuddy.description.type.TypeDescription;
+import com.github.shaded.bytebuddy.dynamic.ClassFileLocator;
+import com.github.shaded.bytebuddy.dynamic.scaffold.MethodGraph;
+import com.github.shaded.bytebuddy.dynamic.scaffold.TypeValidation;
+import com.github.shaded.bytebuddy.implementation.Implementation;
+import com.github.shaded.bytebuddy.jar.asm.ClassVisitor;
+import com.github.shaded.bytebuddy.jar.asm.MethodVisitor;
+import com.github.shaded.bytebuddy.jar.asm.Opcodes;
+import com.github.shaded.bytebuddy.matcher.ElementMatchers;
+import com.github.shaded.bytebuddy.pool.TypePool;
+import com.github.shaded.bytebuddy.utility.OpenedClassReader;
+import com.github.shaded.bytebuddy.utility.RandomString;
 import org.mockito.exceptions.base.MockitoException;
 import org.mockito.internal.creation.bytebuddy.inject.MockMethodDispatcher;
 import org.mockito.internal.util.concurrent.WeakConcurrentMap;
@@ -38,9 +38,9 @@ import java.lang.reflect.Modifier;
 import java.security.ProtectionDomain;
 import java.util.*;
 
-import static net.bytebuddy.implementation.MethodDelegation.withDefaultConfiguration;
-import static net.bytebuddy.implementation.bind.annotation.TargetMethodAnnotationDrivenBinder.ParameterBinder.ForFixedValue.OfConstant.of;
-import static net.bytebuddy.matcher.ElementMatchers.*;
+import static com.github.shaded.bytebuddy.implementation.MethodDelegation.withDefaultConfiguration;
+import static com.github.shaded.bytebuddy.implementation.bind.annotation.TargetMethodAnnotationDrivenBinder.ParameterBinder.ForFixedValue.OfConstant.of;
+import static com.github.shaded.bytebuddy.matcher.ElementMatchers.*;
 import static org.mockito.internal.util.StringUtil.join;
 
 public class InlineBytecodeGenerator implements BytecodeGenerator, ClassFileTransformer {

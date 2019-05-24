@@ -4,7 +4,7 @@
  */
 package org.mockito.internal.creation.bytebuddy;
 
-import net.bytebuddy.TypeCache;
+import com.github.shaded.bytebuddy.TypeCache;
 import org.mockito.mock.SerializableMode;
 
 import java.lang.ref.ReferenceQueue;

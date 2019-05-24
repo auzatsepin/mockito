@@ -4,8 +4,8 @@
  */
 package org.mockitointegration;
 
-import net.bytebuddy.ByteBuddy;
-import net.bytebuddy.agent.ByteBuddyAgent;
+import com.github.shaded.bytebuddy.ByteBuddy;
+import com.github.shaded.bytebuddy.agent.ByteBuddyAgent;
 import org.hamcrest.Matcher;
 import org.junit.Assume;
 import org.junit.Test;

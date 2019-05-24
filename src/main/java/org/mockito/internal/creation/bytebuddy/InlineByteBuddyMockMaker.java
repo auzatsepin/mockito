@@ -4,7 +4,7 @@
  */
 package org.mockito.internal.creation.bytebuddy;
 
-import net.bytebuddy.agent.ByteBuddyAgent;
+import com.github.shaded.bytebuddy.agent.ByteBuddyAgent;
 import org.mockito.Incubating;
 import org.mockito.exceptions.base.MockitoException;
 import org.mockito.exceptions.base.MockitoInitializationException;

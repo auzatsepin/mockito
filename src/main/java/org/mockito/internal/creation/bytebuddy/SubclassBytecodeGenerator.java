@@ -4,17 +4,17 @@
  */
 package org.mockito.internal.creation.bytebuddy;
 
-import net.bytebuddy.ByteBuddy;
-import net.bytebuddy.description.method.MethodDescription;
-import net.bytebuddy.description.modifier.SynchronizationState;
-import net.bytebuddy.description.modifier.Visibility;
-import net.bytebuddy.dynamic.DynamicType;
-import net.bytebuddy.dynamic.loading.MultipleParentClassLoader;
-import net.bytebuddy.dynamic.scaffold.TypeValidation;
-import net.bytebuddy.implementation.FieldAccessor;
-import net.bytebuddy.implementation.Implementation;
-import net.bytebuddy.implementation.attribute.MethodAttributeAppender;
-import net.bytebuddy.matcher.ElementMatcher;
+import com.github.shaded.bytebuddy.ByteBuddy;
+import com.github.shaded.bytebuddy.description.method.MethodDescription;
+import com.github.shaded.bytebuddy.description.modifier.SynchronizationState;
+import com.github.shaded.bytebuddy.description.modifier.Visibility;
+import com.github.shaded.bytebuddy.dynamic.DynamicType;
+import com.github.shaded.bytebuddy.dynamic.loading.MultipleParentClassLoader;
+import com.github.shaded.bytebuddy.dynamic.scaffold.TypeValidation;
+import com.github.shaded.bytebuddy.implementation.FieldAccessor;
+import com.github.shaded.bytebuddy.implementation.Implementation;
+import com.github.shaded.bytebuddy.implementation.attribute.MethodAttributeAppender;
+import com.github.shaded.bytebuddy.matcher.ElementMatcher;
 import org.mockito.codegen.InjectionBase;
 import org.mockito.exceptions.base.MockitoException;
 import org.mockito.internal.creation.bytebuddy.ByteBuddyCrossClassLoaderSerializationSupport.CrossClassLoaderSerializableMock;
@@ -33,11 +33,11 @@ import java.util.LinkedList;
 import java.util.Random;
 
 import static java.lang.Thread.currentThread;
-import static net.bytebuddy.description.modifier.Visibility.PRIVATE;
-import static net.bytebuddy.dynamic.Transformer.ForMethod.withModifiers;
-import static net.bytebuddy.implementation.MethodDelegation.to;
-import static net.bytebuddy.implementation.attribute.MethodAttributeAppender.ForInstrumentedMethod.INCLUDING_RECEIVER;
-import static net.bytebuddy.matcher.ElementMatchers.*;
+import static com.github.shaded.bytebuddy.description.modifier.Visibility.PRIVATE;
+import static com.github.shaded.bytebuddy.dynamic.Transformer.ForMethod.withModifiers;
+import static com.github.shaded.bytebuddy.implementation.MethodDelegation.to;
+import static com.github.shaded.bytebuddy.implementation.attribute.MethodAttributeAppender.ForInstrumentedMethod.INCLUDING_RECEIVER;
+import static com.github.shaded.bytebuddy.matcher.ElementMatchers.*;
 import static org.mockito.internal.util.StringUtil.join;
 
 class SubclassBytecodeGenerator implements BytecodeGenerator {
